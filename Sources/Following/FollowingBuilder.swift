@@ -26,7 +26,7 @@ public protocol FollowingBuildable: Buildable {
 
 open class FollowingBuilder: Builder<FollowingDependency>, FollowingBuildable {
 
-    override init(dependency: FollowingDependency) {
+    public override init(dependency: FollowingDependency) {
         super.init(dependency: dependency)
     }
 
