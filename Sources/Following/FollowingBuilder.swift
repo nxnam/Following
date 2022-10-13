@@ -20,17 +20,17 @@ final class FollowingComponent: Component<FollowingDependency> {
 
 // MARK: - Builder
 
-protocol FollowingBuildable: Buildable {
+public protocol FollowingBuildable: Buildable {
     func build(withListener listener: FollowingListener) -> FollowingRouting
 }
 
-final class FollowingBuilder: Builder<FollowingDependency>, FollowingBuildable {
+open class FollowingBuilder: Builder<FollowingDependency>, FollowingBuildable {
 
     override init(dependency: FollowingDependency) {
         super.init(dependency: dependency)
     }
 
-    func build(withListener listener: FollowingListener) -> FollowingRouting {
+    public func build(withListener listener: FollowingListener) -> FollowingRouting {
         let component = FollowingComponent(dependency: dependency)
         let viewController = FollowingViewController()
         let interactor = FollowingInteractor(presenter: viewController)
