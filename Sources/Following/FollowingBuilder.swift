@@ -8,7 +8,7 @@
 
 import RIBs
 
-protocol FollowingDependency: Dependency {
+public protocol FollowingDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
 }
