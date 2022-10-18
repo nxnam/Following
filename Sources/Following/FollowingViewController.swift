@@ -16,7 +16,7 @@ protocol FollowingPresentableListener: AnyObject {
     // interactor class.
 }
 
-final class FollowingViewController: UIViewController, FollowingPresentable, FollowingViewControllable {
+open class FollowingViewController: UIViewController, FollowingPresentable, FollowingViewControllable {
 
     weak var listener: FollowingPresentableListener?
 }
